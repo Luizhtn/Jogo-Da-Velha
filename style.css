@@ -1,0 +1,46 @@
+body {
+    font-family: "Open Sans";
+    color: #ffd900;
+    background-color: #b9b7b7;
+    }
+    
+    h2 {
+    margin-top: -5px;
+    text-align: center;
+    }
+    
+    .container {
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 20px;  background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(252, 189, 14);
+    }
+    
+    .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    }
+    
+    .celula {
+    width: 75px;
+    height: 65px;
+    font-size: 30pt;
+    margin: 4px 2px;
+    font-weight: 300;
+    padding-top: 10px;
+    text-align: center;
+    background-color: rgba(255, 217, 0, 0.562);
+    }
+
+    .botao-recarregar{
+        display:block;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: 2px solid whitesmoke;
+        background-color: #ffd900a2;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+

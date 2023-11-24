@@ -1,16 +1,28 @@
-const celulas=document.querySelector(".ceula")
-
+const celulas = document.querySelector(".celula");
 let checarTurno = true;
+let turno;
 
-let turno; 
+//Define constantes para representar os jogadores "X" e "Y"
+const JOGADOR_X = "X";
+const JOGADOR_O = "O";
 
-const JOGADOR_X = "X"
-const JOGADOR_O = "O"
+let jogoAcabou = false;
 
-let jogoacabou = false;
-
-document.addEventListener ("clik", (event) =>) {
-    if (event.target.matches(".celula")&&) !jogoacabou {
+document.addEventListener("click", (event) => {
+    if (event.target.matches(".celula") && !jogoAcabou) {
         jogar(event.target.id);
-    } 
+    }
 });
+function jogar(id) {
+    const celula = document.getElementById(id);
+    if (celula.textContent === "") {
+        turno = checarTurno ? JOGADOR_X : JOGADOR_O;
+        checarTurno = !checarTurno;
+        celula.textContent = turno;
+        celula.classList.add(turno);
+        celula.removeEventListener("click", jogar);
+        verificarVencedor(turno);
+
+    }
+}
+
